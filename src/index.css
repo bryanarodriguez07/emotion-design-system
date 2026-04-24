@@ -1,21 +1,71 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
+  /* --- Colors: Brand & Neutrals --- */
+  --color-brand-primary: #004d3d;
+  --color-brand-secondary: #00c070;
+  --color-brand-light: #e6f4f1;
+
+  --color-bg-main: #f4f7f6;
+  --color-bg-card: #ffffff;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+
+  /* --- Semantic Status --- */
+  --color-status-completed: var(--color-brand-secondary);
+  --color-status-in-progress: #004d3d;
+  --color-status-pending: #f3f3f3;
+  --color-status-warning: #ffb800;
+
+  /* --- Typography (System Scale) --- */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-display: 2.5rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* --- Layout & Spacing (8px System) --- */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* --- Borders & Effects --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --border-color: #e0e0e0;
+  --border-subtle: 1px solid #e0e0e0;
+
+  /* Backwards-compatible mappings for existing tokens */
+  --text: var(--color-text-primary);
+  --text-h: var(--color-text-primary);
+  --bg: var(--color-bg-main);
+  --border: var(--border-color);
+  --code-bg: var(--color-bg-card);
+  --accent: var(--color-brand-secondary);
+  --accent-bg: var(--color-brand-light);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: var(--font-family);
+  --heading: var(--font-family);
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: 1.45;
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -32,17 +82,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
+    /* Dark mode tokens mapped to new names */
+    --color-text-primary: #f3f4f6;
+    --color-text-secondary: #9ca3af;
+    --color-bg-main: #16171d;
+    --border-color: #2e303a;
+    --color-bg-card: #1f2028;
+
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
+
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    /* Backwards-compatible mappings */
+    --text: var(--color-text-secondary);
+    --text-h: var(--color-text-primary);
+    --bg: var(--color-bg-main);
+    --border: var(--border-color);
+    --code-bg: var(--color-bg-card);
   }
 
   #social .button-icon {
@@ -55,7 +115,7 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  border-inline: 1px solid var(--border-color);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -70,7 +130,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: var(--color-text-primary);
 }
 
 h1 {
@@ -100,7 +160,7 @@ code,
   font-family: var(--mono);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
+  color: var(--color-text-primary);
 }
 
 code {

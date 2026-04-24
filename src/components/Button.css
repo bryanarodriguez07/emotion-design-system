@@ -1,0 +1,41 @@
+.eds-btn {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: box-shadow 160ms ease, transform 120ms ease, opacity 120ms ease;
+}
+
+.eds-btn:active {
+  transform: translateY(1px);
+}
+
+.eds-btn:focus-visible {
+  outline: 3px solid var(--color-brand-light);
+  outline-offset: 2px;
+}
+
+.eds-btn--primary {
+  background: var(--color-brand-primary);
+  color: var(--color-bg-card);
+  box-shadow: var(--shadow-subtle);
+}
+
+.eds-btn--secondary {
+  background: var(--color-brand-secondary);
+  color: #fff;
+  box-shadow: none;
+}
+
+.eds-btn--ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--border-color);
+}
