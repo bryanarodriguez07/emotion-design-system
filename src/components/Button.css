@@ -23,13 +23,13 @@
 }
 
 .eds-btn--primary {
-  background: var(--color-brand-primary);
+  background: var(--color-brand-secondary);
   color: var(--color-bg-card);
   box-shadow: var(--shadow-subtle);
 }
 
 .eds-btn--secondary {
-  background: var(--color-brand-secondary);
+  background: var(--color-brand-primary);
   color: #fff;
   box-shadow: none;
 }
