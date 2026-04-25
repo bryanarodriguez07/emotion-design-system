@@ -1,0 +1,28 @@
+.eds-slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family);
+}
+.eds-slider__range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: linear-gradient(90deg, var(--color-brand-secondary), var(--color-brand-primary));
+  border-radius: 999px;
+  width: 200px;
+}
+.eds-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-brand-primary);
+}
+.eds-slider__value {
+  min-width: 36px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+}

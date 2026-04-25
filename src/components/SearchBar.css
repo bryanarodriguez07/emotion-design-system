@@ -1,0 +1,21 @@
+.eds-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-family);
+}
+.eds-search__input {
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size-md);
+  width: 240px;
+}
+.eds-search__button {
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  background: var(--color-brand-secondary);
+  color: var(--color-bg-card);
+  border: none;
+  cursor: pointer;
+}

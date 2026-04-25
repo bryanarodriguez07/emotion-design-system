@@ -5,12 +5,16 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Button from './components/Button'
 import Card from './components/Card'
+import Banner from './components/Banner'
+import Slider from './components/Slider'
+import SearchBar from './components/SearchBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Banner message={'Welcome — tokens updated'} cta={<Button variant="ghost">Docs</Button>} />
       <header style={{ padding: '32px', textAlign: 'center' }}>
         <h1>Emotion Design System — Demo</h1>
         <p>Example buttons using the design tokens</p>
@@ -18,6 +22,14 @@ function App() {
           <Button onClick={() => setCount(c => c + 1)}>Primary Button ({count})</Button>
           <Button variant="secondary" onClick={() => alert('Secondary clicked')}>Secondary</Button>
           <Button variant="ghost" onClick={() => alert('Ghost clicked')}>Ghost</Button>
+        </div>
+
+        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '18px' }}>
+          <SearchBar onSearch={(q) => alert(`Search: ${q}`)} />
+        </div>
+
+        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '18px', alignItems: 'center' }}>
+          <Slider value={50} min={0} max={100} onChange={(v) => console.log('slider', v)} />
         </div>
 
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '28px', flexWrap: 'wrap' }}>
