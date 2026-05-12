@@ -1,0 +1,113 @@
+.ap-wrap {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  background: #12131a;
+}
+
+.ap-preview-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c1e2a;
+  border-right: 1px solid #1e2030;
+  padding: 32px;
+}
+
+.ap-preview { width: 100%; max-width: 400px; }
+
+.ap-alert {
+  border-radius: 8px;
+  padding: 14px 16px;
+  position: relative;
+}
+
+.ap-alert__close {
+  position: absolute; top: 10px; right: 12px;
+  background: none; border: none; cursor: pointer;
+  font-size: 14px; opacity: 0.7; padding: 0; line-height: 1;
+}
+
+.ap-alert__title { font-size: 14px; font-weight: 700; margin: 0 0 4px; text-align: left; font-family: 'Roboto', sans-serif; }
+.ap-alert__body  { font-size: 13px; margin: 0; line-height: 1.5; padding-right: 20px; text-align: left; font-family: 'Roboto', sans-serif; }
+
+.ap-alert--success-filled   { background: #14532d; }
+.ap-alert--success-filled .ap-alert__title { color: #bbf7d0; }
+.ap-alert--success-filled .ap-alert__body  { color: #86efac; }
+.ap-alert--success-filled .ap-alert__close { color: #bbf7d0; }
+
+.ap-alert--success-outlined { background: #0a1f13; border: 1.5px solid #22c55e; }
+.ap-alert--success-outlined .ap-alert__title { color: #22c55e; }
+.ap-alert--success-outlined .ap-alert__body  { color: #86efac; }
+.ap-alert--success-outlined .ap-alert__close { color: #22c55e; }
+
+.ap-alert--info-filled { background: #1e3a5f; }
+.ap-alert--info-filled .ap-alert__title { color: #bfdbfe; }
+.ap-alert--info-filled .ap-alert__body  { color: #93c5fd; }
+.ap-alert--info-filled .ap-alert__close { color: #bfdbfe; }
+
+.ap-alert--info-outlined { background: #0d1e35; border: 1.5px solid #3b82f6; }
+.ap-alert--info-outlined .ap-alert__title { color: #60a5fa; }
+.ap-alert--info-outlined .ap-alert__body  { color: #93c5fd; }
+.ap-alert--info-outlined .ap-alert__close { color: #60a5fa; }
+
+.ap-alert--warning-filled { background: #451a03; }
+.ap-alert--warning-filled .ap-alert__title { color: #fde68a; }
+.ap-alert--warning-filled .ap-alert__body  { color: #fcd34d; }
+.ap-alert--warning-filled .ap-alert__close { color: #fde68a; }
+
+.ap-alert--warning-outlined { background: #1c1203; border: 1.5px solid #f59e0b; }
+.ap-alert--warning-outlined .ap-alert__title { color: #fbbf24; }
+.ap-alert--warning-outlined .ap-alert__body  { color: #fcd34d; }
+.ap-alert--warning-outlined .ap-alert__close { color: #fbbf24; }
+
+.ap-alert--error-filled { background: #4c0519; }
+.ap-alert--error-filled .ap-alert__title { color: #fecdd3; }
+.ap-alert--error-filled .ap-alert__body  { color: #fca5a5; }
+.ap-alert--error-filled .ap-alert__close { color: #fecdd3; }
+
+.ap-alert--error-outlined { background: #1f0a0e; border: 1.5px solid #ef4444; }
+.ap-alert--error-outlined .ap-alert__title { color: #f87171; }
+.ap-alert--error-outlined .ap-alert__body  { color: #fca5a5; }
+.ap-alert--error-outlined .ap-alert__close { color: #f87171; }
+
+.ap-config-panel {
+  width: 240px; flex-shrink: 0;
+  background: #12131a; display: flex; flex-direction: column;
+}
+
+.ap-config-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px; border-bottom: 1px solid #1e2030;
+}
+
+.ap-config-title { font-size: 15px; color: #e5e7eb; font-family: 'Roboto', sans-serif; }
+
+.ap-config-close {
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: #4b5563; padding: 0; line-height: 1;
+}
+
+.ap-config-body { padding: 20px; overflow-y: auto; }
+
+.ap-config-label {
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #4b5563; margin: 0 0 10px;
+}
+
+.ap-config-label + .ap-config-label,
+.ap-radio-row + .ap-config-label { margin-top: 16px; }
+
+.ap-radio-row {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 10px; cursor: pointer;
+  font-family: 'Roboto', sans-serif; font-size: 14px; color: #d1d5db;
+}
+
+.ap-radio-row input {
+  accent-color: #22c55e; color-scheme: dark;
+  width: 15px; height: 15px; cursor: pointer; flex-shrink: 0;
+}

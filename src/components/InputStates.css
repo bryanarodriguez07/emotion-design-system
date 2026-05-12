@@ -1,0 +1,147 @@
+.is-wrap {
+  background: #12131a;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.is-col-headers {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.is-col-header {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4b5563;
+}
+
+.is-spacer {
+  /* empty first column */
+}
+
+.is-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.is-row-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.is-row-label--error {
+  color: #6b7280;
+}
+
+.is-divider {
+  grid-column: 1 / -1;
+  border: none;
+  border-top: 1px solid #1e2030;
+  margin: 8px 0;
+}
+
+.is-cell {
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.is-cell-inner {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* Input field wrapper */
+.is-field-wrap {
+  width: 100%;
+}
+
+/* Base input */
+.is-inp {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  background: #12131a;
+  outline: none;
+  display: block;
+}
+
+.is-inp--default {
+  border: 1.5px solid #2e3248;
+  color: #6b7280;
+}
+
+.is-inp--filled {
+  border: 1.5px solid #2e3248;
+  color: #f0f0f0;
+}
+
+.is-inp--hover {
+  border: 1.5px solid #9ca3af;
+  color: #9ca3af;
+  background: #1c1e2a;
+}
+
+.is-inp--focus {
+  border: 1.5px solid #22c55e;
+  color: #f0f0f0;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.is-inp--disabled {
+  border: 1.5px solid #1a1c26;
+  color: #2d3748;
+  background: #161820;
+  cursor: not-allowed;
+}
+
+.is-inp--error {
+  border: 1.5px solid #ef4444;
+  color: #f0f0f0;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Labels */
+.is-inp-label {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.is-inp-label--default,
+.is-inp-label--filled {
+  color: #6b7280;
+}
+
+.is-inp-label--hover {
+  color: #9ca3af;
+}
+
+.is-inp-label--focus {
+  color: #22c55e;
+}
+
+.is-inp-label--disabled {
+  color: #1f2937;
+}
+
+.is-inp-label--error {
+  color: #ef4444;
+}
+
+/* Error message */
+.is-error-msg {
+  font-size: 11px;
+  color: #ef4444;
+  margin-top: 4px;
+}

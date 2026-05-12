@@ -1,0 +1,91 @@
+.ip-wrap {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  background: #12131a;
+  color-scheme: dark;
+}
+
+.ip-preview-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c1e2a;
+  border-right: 1px solid #1e2030;
+  padding: 32px;
+}
+
+.ip-preview { width: 100%; max-width: 320px; }
+
+.ip-field-wrap { width: 100%; }
+
+.ip-label { font-size: 12px; margin-bottom: 6px; font-family: 'Roboto', sans-serif; }
+.ip-label--default,
+.ip-label--filled,
+.ip-label--hover,
+.ip-label--disabled { color: #6b7280; }
+.ip-label--focus    { color: #22c55e; }
+.ip-label--error    { color: #ef4444; }
+
+.ip-inp {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background: #12131a;
+  outline: none;
+  display: block;
+}
+
+.ip-inp--default  { border: 1.5px solid #2e3248; color: #6b7280; }
+.ip-inp--filled   { border: 1.5px solid #2e3248; color: #f0f0f0; }
+.ip-inp--hover    { border: 1.5px solid #9ca3af; color: #9ca3af; background: #1c1e2a; }
+.ip-inp--focus    { border: 1.5px solid #22c55e; color: #f0f0f0; box-shadow: 0 0 0 3px rgba(34,197,94,0.15); }
+.ip-inp--disabled { border: 1.5px solid #1a1c26; color: #2d3748; background: #161820; cursor: not-allowed; }
+.ip-inp--error    { border: 1.5px solid #ef4444; color: #f0f0f0; box-shadow: 0 0 0 3px rgba(239,68,68,0.15); }
+
+.ip-error-msg { font-size: 12px; color: #ef4444; margin-top: 6px; font-family: 'Roboto', sans-serif; }
+
+.ip-config-panel {
+  width: 240px; flex-shrink: 0;
+  background: #12131a; display: flex; flex-direction: column;
+}
+
+.ip-config-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px; border-bottom: 1px solid #1e2030;
+}
+
+.ip-config-title { font-size: 15px; color: #e5e7eb; font-family: 'Roboto', sans-serif; }
+
+.ip-config-close {
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: #4b5563; padding: 0; line-height: 1;
+}
+
+.ip-config-body { padding: 20px; overflow-y: auto; }
+
+.ip-config-label {
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #4b5563; margin: 0 0 10px;
+}
+
+.ip-config-label + .ip-config-label,
+.ip-checkbox-row + .ip-config-label,
+.ip-radio-row + .ip-config-label { margin-top: 16px; }
+
+.ip-radio-row, .ip-checkbox-row {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 10px; cursor: pointer;
+  font-family: 'Roboto', sans-serif; font-size: 14px; color: #d1d5db;
+}
+
+.ip-radio-row input, .ip-checkbox-row input {
+  accent-color: #22c55e; color-scheme: dark;
+  width: 15px; height: 15px; cursor: pointer; flex-shrink: 0;
+}

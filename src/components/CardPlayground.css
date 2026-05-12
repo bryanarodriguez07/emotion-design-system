@@ -1,0 +1,213 @@
+.cp-wrap {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  background: #12131a;
+  color-scheme: light;
+}
+
+/* Left preview panel */
+.cp-preview-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1e2030;
+}
+
+.cp-tabs {
+  display: flex;
+  border-bottom: 1px solid #1e2030;
+  padding: 0 8px;
+  background: #12131a;
+}
+
+.cp-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #4b5563;
+  padding: 14px 12px 12px;
+  margin-bottom: -1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cp-tab--active {
+  color: #22c55e;
+  border-bottom-color: #22c55e;
+}
+
+.cp-tab:hover:not(.cp-tab--active) {
+  color: #9ca3af;
+}
+
+.cp-preview {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: #1c1e2a;
+  min-height: 500px;
+}
+
+/* Card inside playground */
+.cp-card {
+  width: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #23263a;
+}
+
+.cp-card--elevated {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cp-card--outlined {
+  border: 1px solid #2e3248;
+  box-shadow: none;
+}
+
+.cp-card__media {
+  background: #2a2d40;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cp-card__body {
+  padding: 16px;
+}
+
+.cp-card__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f0f0f0;
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+.cp-card__sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  text-align: left;
+}
+
+.cp-card__support {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 8px 0 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.cp-card__divider {
+  border-top: 1px solid #1e2030;
+}
+
+.cp-card__actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px 12px;
+  text-align: left;
+}
+
+.cp-card__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #22c55e;
+  padding: 6px 4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.cp-card__btn:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+/* Right config panel */
+.cp-config-panel {
+  width: 240px;
+  flex-shrink: 0;
+  background: #12131a;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-config-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #1e2030;
+}
+
+.cp-config-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+.cp-config-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #4b5563;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.cp-config-close:hover {
+  color: #9ca3af;
+}
+
+.cp-config-body {
+  padding: 20px;
+}
+
+.cp-options-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 16px;
+}
+
+.cp-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.cp-checkbox-row input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #22c55e;
+  color-scheme: dark;
+  flex-shrink: 0;
+}

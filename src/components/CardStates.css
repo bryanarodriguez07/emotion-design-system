@@ -1,0 +1,133 @@
+.cs-wrap {
+  background: #12131a;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.cs-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 4px;
+  align-items: start;
+}
+
+.cs-col-spacer {
+  /* empty first column */
+}
+
+.cs-col-header {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.cs-row-label {
+  font-size: 13px;
+  color: #9ca3af;
+  padding-top: 12px;
+}
+
+.cs-card-wrap {
+  background: #1c1e2a;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+/* Card base */
+.cs-card {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #23263a;
+}
+
+.cs-card--elevated {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cs-card--outlined {
+  border: 1px solid #2e3248;
+  box-shadow: none;
+}
+
+.cs-card__media {
+  background: #2a2d40;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-card__body {
+  padding: 12px;
+  text-align: left;
+}
+
+.cs-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f0f0f0;
+  margin: 0 0 3px;
+  text-align: left;
+}
+
+.cs-card__sub {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  text-align: left;
+}
+
+.cs-card__support {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 6px 0 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.cs-card__divider {
+  border-top: 1px solid #1e2030;
+  margin: 8px 0;
+}
+
+.cs-card__actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px 10px;
+  text-align: left;
+}
+
+.cs-card__btn {
+  font-size: 11px;
+  font-weight: 500;
+  color: #22c55e;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.cs-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  background: #14532d;
+  color: #22c55e;
+  border-radius: 4px;
+  padding: 2px 7px;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}

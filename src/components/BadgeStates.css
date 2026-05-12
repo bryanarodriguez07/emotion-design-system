@@ -1,0 +1,90 @@
+.bdg-wrap {
+  background: #12131a;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bdg-col-headers {
+  display: grid;
+  grid-template-columns: 110px repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bdg-col-header {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4b5563;
+}
+
+.bdg-spacer {
+  /* empty first column */
+}
+
+.bdg-row {
+  display: grid;
+  grid-template-columns: 110px repeat(4, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.bdg-row-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.bdg-row-label--completed  { color: #6b7280; }
+.bdg-row-label--pending    { color: #6b7280; }
+.bdg-row-label--failed     { color: #6b7280; }
+.bdg-row-label--processing { color: #6b7280; }
+
+.bdg-cell {
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.bdg-divider {
+  grid-column: 1 / -1;
+  border: none;
+  border-top: 1px solid #1e2030;
+  margin: 8px 0;
+}
+
+/* Base badge */
+.bdg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.bdg i {
+  font-size: 13px;
+}
+
+/* Completed */
+.bdg--completed-filled   { background: #14532d; color: #4ade80; }
+.bdg--completed-outlined { background: transparent; border: 1.5px solid #22c55e; color: #22c55e; }
+
+/* Pending */
+.bdg--pending-filled   { background: #451a03; color: #fbbf24; }
+.bdg--pending-outlined { background: transparent; border: 1.5px solid #f59e0b; color: #fbbf24; }
+
+/* Failed */
+.bdg--failed-filled   { background: #4c0519; color: #f87171; }
+.bdg--failed-outlined { background: transparent; border: 1.5px solid #ef4444; color: #f87171; }
+
+/* Processing */
+.bdg--processing-filled   { background: #1e3a5f; color: #60a5fa; }
+.bdg--processing-outlined { background: transparent; border: 1.5px solid #3b82f6; color: #60a5fa; }
