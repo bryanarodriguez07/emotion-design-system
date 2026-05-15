@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 import CardPlayground from './CardPlayground';
 import CardStates from './CardStates';
 import ButtonPlayground from './ButtonPlayground';
@@ -26,7 +27,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'inputs', label: 'Inputs' },
 ];
 
-const DocsLayout: React.FC = () => {
+const DocsLayout: FC = () => {
   const [active, setActive] = useState<ComponentId>('cards');
 
   return (

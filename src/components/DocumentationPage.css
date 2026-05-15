@@ -1,0 +1,46 @@
+.doc-wrap {
+  background: #0d0e14;
+  min-height: 100vh;
+  color: #e6eef0;
+}
+
+.doc-inner {
+  display: flex;
+}
+
+.doc-sidebar {
+  width: 220px;
+  background: #12131a;
+  border-right: 1px solid #1e2030;
+  padding: 24px;
+}
+
+.doc-sidebar button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #6b7280;
+  text-align: left;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.doc-sidebar button:hover {
+  color: #d1d5db;
+}
+
+.doc-content {
+  padding: 24px 32px;
+  flex: 1;
+}
+
+.doc-section__title {
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: #f8fafc;
+}
+
+.doc-section__desc {
+  color: #9ca3af;
+}
