@@ -1,0 +1,62 @@
+.ppage-wrap {
+  background: #0d0e14;
+  min-height: calc(100vh - 56px);
+  padding: 0 0 5rem;
+}
+
+.ppage-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.ppage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid #1e2030;
+  margin-bottom: 3rem;
+}
+
+.ppage-subnav {
+  display: flex;
+  gap: 4px;
+}
+
+.ppage-subnav__link {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.ppage-subnav__link:hover {
+  color: #d1d5db;
+  background: #1c1e2a;
+}
+
+.ppage-subnav__link--active {
+  color: #22c55e;
+  background: #0a1f13;
+}
+
+.ppage-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin: 0;
+  letter-spacing: -0.3px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ppage-title--standalone {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid #1e2030;
+  margin-bottom: 3rem;
+}

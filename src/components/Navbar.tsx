@@ -1,42 +1,34 @@
-import type { FC } from 'react';
-import './Navbar.css';
+import React from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import './Navbar.css'
 
-export type Page = 'home' | 'documentation' | 'design-system';
+const Navbar: React.FC = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
 
-interface NavbarProps {
-  activePage: Page;
-  onNavigate: (page: Page) => void;
+  const links = [
+    { path: '/', label: 'Home' },
+    { path: '/documentation', label: 'Documentation' },
+    { path: '/releases', label: 'Releases' },
+    { path: '/design-system', label: 'Design System' },
+  ]
+
+  return (
+    <nav className="navbar">
+      <span className="navbar__logo">Emotion Design System</span>
+      <div className="navbar__links">
+        {links.map(({ path, label }) => (
+          <button
+            key={path}
+            className={`navbar__link ${location.pathname === path ? 'navbar__link--active' : ''}`}
+            onClick={() => navigate(path)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+    </nav>
+  )
 }
 
-const Navbar: FC<NavbarProps> = ({ activePage, onNavigate }) => {
-  return (
-    <header className="navbar">
-      <div className="navbar__logo">Emotion</div>
-
-      <nav className="navbar__nav" aria-label="Primary navigation">
-        <button
-          className={`navbar__link ${activePage === 'home' ? 'navbar__link--active' : ''}`}
-          onClick={() => onNavigate('home')}
-        >
-          Home
-        </button>
-
-        <button
-          className={`navbar__link ${activePage === 'documentation' ? 'navbar__link--active' : ''}`}
-          onClick={() => onNavigate('documentation')}
-        >
-          Documentation
-        </button>
-
-        <button
-          className={`navbar__link ${activePage === 'design-system' ? 'navbar__link--active' : ''}`}
-          onClick={() => onNavigate('design-system')}
-        >
-          Design System
-        </button>
-      </nav>
-    </header>
-  );
-};
-
-export default Navbar;
+export default Navbar

@@ -1,0 +1,95 @@
+.rel-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rel-entry {
+  padding: 2rem 0;
+  border-bottom: 1px solid #1e2030;
+}
+
+.rel-entry:last-child {
+  border-bottom: none;
+}
+
+.rel-entry__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.rel-entry__version {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0f0f0;
+  font-family: 'Roboto Mono', ui-monospace, monospace;
+}
+
+.rel-entry__tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.rel-entry__tag--stable {
+  color: #22c55e;
+  background: #0a1f13;
+  border: 1px solid #166534;
+}
+
+.rel-entry__tag--beta {
+  color: #60a5fa;
+  background: #0a1628;
+  border: 1px solid #1e40af;
+}
+
+.rel-entry__tag--alpha {
+  color: #a78bfa;
+  background: #130e28;
+  border: 1px solid #4c1d95;
+}
+
+.rel-entry__date {
+  font-size: 13px;
+  color: #4b5563;
+  font-family: 'Roboto', sans-serif;
+}
+
+.rel-entry__summary {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #9ca3af;
+  margin: 0 0 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.rel-entry__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rel-entry__item {
+  font-size: 13px;
+  color: #6b7280;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.rel-entry__item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #374151;
+}

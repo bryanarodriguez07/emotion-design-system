@@ -1,29 +1,22 @@
-import { useState } from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
-import type { Page } from './components/Navbar'
 import HomePage from './components/HomePage'
 import DocumentationPage from './components/DocumentationPage'
+import ReleasesPage from './components/ReleasesPage'
 import DocsLayout from './components/DocsLayout'
 
 function App() {
-  const [active, setActive] = useState<Page>('home')
-
   return (
-    <div className="App">
-      <Navbar activePage={active} onNavigate={setActive} />
-
-      <main>
-        {active === 'home' && <HomePage onNavigate={setActive} />}
-        {active === 'documentation' && <DocumentationPage />}
-        {active === 'design-system' && (
-          <div style={{ padding: 24 }}>
-            <h1 style={{ color: '#f8fafc' }}>Design System</h1>
-            <DocsLayout />
-          </div>
-        )}
-      </main>
-    </div>
+    <HashRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/documentation" element={<DocumentationPage />} />
+        <Route path="/releases" element={<ReleasesPage />} />
+        <Route path="/design-system" element={<DocsLayout />} />
+      </Routes>
+    </HashRouter>
   )
 }
 

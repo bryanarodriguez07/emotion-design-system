@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import HeroGraphic from './HeroGraphic';
 
-interface HomePageProps {
-  onNavigate: (page: 'home' | 'documentation' | 'design-system') => void;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
+const HomePage: React.FC = () => {
+  const navigate = useNavigate();
+  const onNavigate = (page: string) => {
+    if (page === 'design-system') navigate('/design-system');
+    else if (page === 'documentation') navigate('/documentation');
+    else navigate('/');
+  };
   return (
     <div className="hp-wrap">
 
